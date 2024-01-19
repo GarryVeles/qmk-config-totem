@@ -55,6 +55,7 @@ enum custom_keycodes {
 // ┌─────────────────────────────────────────────────┐
 // │ d e f i n e   T a p - D a n c e'                │
 // └─────────────────────────────────────────────────┘
+// https://github.com/samhocevar-forks/qmk-firmware/blob/master/docs/feature_tap_dance.md
 
 typedef struct {
   bool is_press_action;
