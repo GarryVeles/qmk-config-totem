@@ -75,6 +75,8 @@ enum {
 //Tap dance enums
 enum {
   B_CTL = 0,
+  Q_ESC = 1,
+  Z_BSPC = 2,
   SOME_OTHER_DANCE
 };
 
@@ -152,9 +154,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
    [_QWERTY] = LAYOUT(
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
-              KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,  
+              TD(Q_ESC), KC_W,    KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,  
               GUI_A,    ALT_S,    CTL_D,    SHT_F,    KC_G,         KC_H,     SHT_J,    CTL_K,    ALT_L,    GUI_S,    
-    RAISE2,   KC_Z,     CTL_X,    KC_C,     KC_V,     TD(B_CTL),    KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_QUOT,
+    RAISE2,   TD(Z_BSPC), CTL_X,  KC_C,     KC_V,     TD(B_CTL),    KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_QUOT,
                                   KC_DEL,   LOWER,    KC_SPC,       KC_BSPC,  RAISE,    KC_ENT
  ),
 
@@ -482,7 +484,9 @@ void b_reset (tap_dance_state_t *state, void *user_data) {
 }
 
 tap_dance_action_t tap_dance_actions[] = {
-  [B_CTL]     = ACTION_TAP_DANCE_FN_ADVANCED(NULL, b_finished, b_reset)
+  [B_CTL]     = ACTION_TAP_DANCE_FN_ADVANCED(NULL, b_finished, b_reset),
+  [Q_ESC]     = ACTION_TAP_DANCE_DOUBLE(KC_Q, KC_ESC),
+  [Z_BSPC]    = ACTION_TAP_DANCE_DOUBLE(KC_Z, KC_BSPC)
 };
 /*
   ╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸
