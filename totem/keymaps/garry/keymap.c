@@ -42,6 +42,7 @@ enum custom_keycodes {
     COLEMAK = SAFE_RANGE,
     QWERTY,
     LOWER,
+    LOWER2,
     RAISE,
     RAISE2,
     ADJ1,
@@ -97,6 +98,7 @@ void b_reset (tap_dance_state_t *state, void *user_data);
 #define CTL_D MT(MOD_LCTL, KC_D)
 #define SHT_F MT(MOD_LSFT, KC_F)
 #define CTL_X MT(MOD_LCTL, KC_X)
+#define SHT_C MT(MOD_LSFT, KC_C)
 
 // RIGHT HAND HOME ROW MODS QWERTY ├─────────────────┐
 
@@ -124,6 +126,7 @@ void b_reset (tap_dance_state_t *state, void *user_data);
 
 
 #define LOWER LT(_LOWER, KC_TAB)
+#define LOWER2 LT(_LOWER, KC_QUOT)
 #define RAISE LT(_RAISE, KC_ESC)
 #define RAISE2 LT(_RAISE, KC_GRV)
 #define ADJ1 MO(_ADJ1)
@@ -156,7 +159,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
               TD(Q_ESC), KC_W,    KC_E,     KC_R,     KC_T,         KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,  
               GUI_A,    ALT_S,    CTL_D,    SHT_F,    KC_G,         KC_H,     SHT_J,    CTL_K,    ALT_L,    GUI_S,    
-    RAISE2,   TD(Z_BSPC), CTL_X,  KC_C,     KC_V,     TD(B_CTL),    KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  KC_QUOT,
+    RAISE2,   TD(Z_BSPC), CTL_X,  SHT_C,    KC_V,     TD(B_CTL),    KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,  LOWER2,
                                   KC_DEL,   LOWER,    KC_SPC,       KC_BSPC,  RAISE,    KC_ENT
  ),
 
