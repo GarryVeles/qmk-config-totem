@@ -174,7 +174,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
              ├─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┤
              │ NUMLCK  │    ←    │    ↓    │    →    │  FRWD   ││   WH↓   │   [←]   │   [↓]   │   [→]   │   ←WH   │    
    ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-   │ SCRNSHT │  SCRL   │   PG↓   │   INS   │   PG↑   │  BACK   ││    _    │    |    │    -    │    +    │    =    │    \    │
+   │ SCRNSHT │  SCRL   │   PG↑   │   INS   │   PG↓   │  BACK   ││    _    │    |    │    -    │    +    │    =    │    \    │
    └─────────┴─────────┴─────────┼─────────┼─────────┼─────────┤├─────────┼─────────┼─────────┼─────────┴─────────┴─────────┘
                                  │    ▼    │  ADJ1   │    ▼    ││    ▼    │    ▼    │    ▼    │  
                                  └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘ */ 
@@ -183,7 +183,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //╷         ╷         ╷         ╷         ╷         ╷         ╷╷         ╷         ╷         ╷         ╷         ╷         ╷
               KC_CAPS,  KC_HOME,  KC_UP,    KC_END,   KC_BRK,     KC_WH_U,  KC_BTN1,  KC_MS_U,  KC_BTN2,  KC_WH_R,
               KC_NUM,   KC_LEFT,  KC_DOWN,  KC_RGHT,  RCS(KC_Z),  KC_WH_D,  KC_MS_L,  KC_MS_D,  KC_MS_R,  KC_WH_L,  
-    KC_PSCR,  KC_SCRL,  KC_PGDN,  KC_INS,   KC_PGUP,  C(KC_Z),    KC_UNDS,  KC_PIPE,  KC_MINS,  KC_PLUS,  KC_EQL,  KC_NUBS,
+    KC_PSCR,  KC_SCRL,  KC_PGUP,  KC_INS,   KC_PGDN,  C(KC_Z),    KC_UNDS,  KC_PIPE,  KC_MINS,  KC_PLUS,  KC_EQL,  KC_NUBS,
                                   _______,  ADJ1,     _______,    _______,  _______,  _______
  ),
 
