@@ -26,9 +26,9 @@ C:\Users\user\qmk_firmware\
 C:\Users\user\qmk_firmware\keyboards\totem\keymaps\garry\
 Then use this command in QMK MSYS to create the firmware.
 
-`qmk compile -kb totem -km default`
+`qmk compile -kb totem -km garry`
 
-If you use just a random keymap to test you can use the `totem_default.uf2` which you can find in the root of the repository.\
+My keymap to work `totem_garry.uf2` which you can find in the root of the repository.\
 C:\Users\user\qmk_firmware
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) for more information. If you never used QMK, you can start with the [Newbs Guide](https://docs.qmk.fm/#/newbs).
